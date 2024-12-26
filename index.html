@@ -10,6 +10,7 @@
       font-family: "IranSans";
       src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/Vazir.ttf") format("truetype");
     }
+
     body {
       margin: 0;
       padding: 0;
@@ -25,18 +26,20 @@
     }
 
     .container {
-      width: 80%;
+      width: 90%;
       max-width: 800px;
       padding: 20px;
       background: #e0e0e0;
       border-radius: 20px;
       box-shadow: 8px 8px 15px #b8b8b8, -8px -8px 15px #ffffff;
       transition: transform 0.3s ease-out;
+      margin: 10% 0;
     }
 
     h1 {
       text-align: center;
       color: #555;
+      margin: 0;
     }
 
     p {
@@ -78,6 +81,27 @@
     a:hover::before {
       width: 100%;
     }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+        overflow: auto;
+      }
+
+      .container {
+        margin: 10% 0;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -101,7 +125,13 @@
     document.addEventListener('mousemove', (event) => {
       const x = (window.innerWidth / 2 - event.clientX) / 30;
       const y = (window.innerHeight / 2 - event.clientY) / 30;
+      container.style.transform = `translate(${x}px, ${y}px)`;
+    });
 
+    document.addEventListener('touchmove', (event) => {
+      const touch = event.touches[0];
+      const x = (window.innerWidth / 2 - touch.clientX) / 30;
+      const y = (window.innerHeight / 2 - touch.clientY) / 30;
       container.style.transform = `translate(${x}px, ${y}px)`;
     });
   </script>
