@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beautiful Neomorphism styled webpage.">
+  <title>clone contests</title>
+  <style>
+    @font-face {
+      font-family: "IranSans";
+      src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/Vazir.ttf") format("truetype");
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
+      color: #333;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      background: #e0e0e0;
+      border-radius: 20px;
+      box-shadow: 8px 8px 15px #b8b8b8, -8px -8px 15px #ffffff;
+      transition: transform 0.3s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #555;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .rtl {
+      direction: rtl;
+      text-align: right;
+      font-family: "IranSans", Arial, sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #007BFF;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    a:hover::before {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <h1>ICPC 2024 - west asia (Tehran site) mirror version</h1>
+    <p>
+      To access the contest, first register in <a href="https://quera.org/course/add_to_course/course/19909/">this class</a> (if you don't have a <a href="https://quera.org/">Quera</a> account, sign up there first) then enter <a href="https://quera.org/course/assignments/79348/problems">the contest</a>. (There are several other contests available as well).
+      <br>
+      This contest was cloned using the test data published <a href="https://icpc.sharif.edu/2024/">here</a> and with the help of <a href="https://github.com/ctrl-alt-Defeat-icpc/iq-ship">iq-ship</a> and <a href="https://github.com/ctrl-alt-Defeat-icpc/checker-manual-iqs">manual checkers</a>.
+    </p>
+    <p class="rtl">
+      با سلام ویژه به علاقه‌مندان! اگر میخواهید وارد کانتست بشوید ابتدا در <a href="https://quera.org/course/add_to_course/course/19909/">کلاس کوئرایی ما</a> ثبت نام کنید. (اگر هنوز در کوئرا ثبت نام نکردید اینکار رو بکنید.) سپس وارد <a href="https://quera.org/course/assignments/79348/problems">کانتست</a> بشید. به همین راحتی!
+      <br>
+      همچنین در این کلاس چندین کانتست دیگه هم شبیه سازی شدن. این شبیه سازی با کمک چند تا پروژه شبیه سازی شده که توی خود کانتست بهش اشاره شده! همچنین اگر به کدها و برنامه‌های گروه ما علاقه‌مندی یه نگاهی به <a href="https://github.com/ctrl-alt-Defeat-icpc">صفحه گیت‌هابمون</a> بنداز!
+    </p>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = (window.innerWidth / 2 - event.clientX) / 30;
+      const y = (window.innerHeight / 2 - event.clientY) / 30;
+
+      container.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
+</html>
